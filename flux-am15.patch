@@ -1,0 +1,266 @@
+diff -Nru flux-0.4.1/examples/Makefile.am flux-0.4.1.new/examples/Makefile.am
+--- flux-0.4.1/examples/Makefile.am	Thu Feb 10 00:02:22 2000
++++ flux-0.4.1.new/examples/Makefile.am	Sun Dec  2 13:04:28 2001
+@@ -1,3 +1,3 @@
+ SUBDIRS = vpn smtp tt-indent
+ 
+-EXTRA_DIST += ChangeLog
++EXTRA_DIST = ChangeLog
+diff -Nru flux-0.4.1/examples/smtp/Makefile.am flux-0.4.1.new/examples/smtp/Makefile.am
+--- flux-0.4.1/examples/smtp/Makefile.am	Thu Feb 10 00:02:23 2000
++++ flux-0.4.1.new/examples/smtp/Makefile.am	Sun Dec  2 13:04:34 2001
+@@ -4,4 +4,4 @@
+ 
+ LDADD = ../../src/libflux.la
+ 
+-EXTRA_DIST += ChangeLog
++EXTRA_DIST = ChangeLog
+diff -Nru flux-0.4.1/include/Makefile.am flux-0.4.1.new/include/Makefile.am
+--- flux-0.4.1/include/Makefile.am	Thu Feb 10 00:02:07 2000
++++ flux-0.4.1.new/include/Makefile.am	Sun Dec  2 13:03:40 2001
+@@ -5,4 +5,4 @@
+ 
+ noinst_HEADERS = ftime.h
+ 
+-EXTRA_DIST += ChangeLog
++EXTRA_DIST = ChangeLog
+diff -Nru flux-0.4.1/src/Makefile.am flux-0.4.1.new/src/Makefile.am
+--- flux-0.4.1/src/Makefile.am	Thu Feb 10 00:02:08 2000
++++ flux-0.4.1.new/src/Makefile.am	Sun Dec  2 13:04:01 2001
+@@ -36,4 +36,4 @@
+ 
+ all: all-recursive libflux.la
+ 
+-EXTRA_DIST += ChangeLog
++EXTRA_DIST = ChangeLog
+diff -Nru flux-0.4.1/src/bt/Makefile.am flux-0.4.1.new/src/bt/Makefile.am
+--- flux-0.4.1/src/bt/Makefile.am	Thu Feb 10 00:02:20 2000
++++ flux-0.4.1.new/src/bt/Makefile.am	Sun Dec  2 13:04:11 2001
+@@ -1,6 +1,5 @@
+-EXTRA_DIST = bt_priv.h
++EXTRA_DIST = bt_priv.h ChangeLog
++
+ noinst_LTLIBRARIES = libbt.la
+ 
+ libbt_la_SOURCES = alloc.c insert.c remove.c find.c
+-
+-EXTRA_DIST += ChangeLog
+diff -Nru flux-0.4.1/src/build/Makefile.am flux-0.4.1.new/src/build/Makefile.am
+--- flux-0.4.1/src/build/Makefile.am	Thu Feb 10 00:02:08 2000
++++ flux-0.4.1.new/src/build/Makefile.am	Sun Dec  2 13:03:40 2001
+@@ -2,4 +2,4 @@
+ 
+ libbuild_la_SOURCES = info.c
+ 
+-EXTRA_DIST += ChangeLog
++EXTRA_DIST = ChangeLog
+diff -Nru flux-0.4.1/src/cgi/Makefile.am flux-0.4.1.new/src/cgi/Makefile.am
+--- flux-0.4.1/src/cgi/Makefile.am	Thu Feb 10 00:02:08 2000
++++ flux-0.4.1.new/src/cgi/Makefile.am	Sun Dec  2 13:03:40 2001
+@@ -3,4 +3,4 @@
+ libcgi_la_SOURCES = cgi.c \
+ 		    cgi-ttree.c
+ 
+-EXTRA_DIST += ChangeLog
++EXTRA_DIST = ChangeLog
+diff -Nru flux-0.4.1/src/cipher/Makefile.am flux-0.4.1.new/src/cipher/Makefile.am
+--- flux-0.4.1/src/cipher/Makefile.am	Thu Feb 10 00:02:09 2000
++++ flux-0.4.1.new/src/cipher/Makefile.am	Sun Dec  2 13:03:40 2001
+@@ -5,4 +5,4 @@
+ libcipher_la_SOURCES = smallprimes.c genprime.c rmd160.c twofish.c elgamal.c \
+ cipher.c
+ 
+-EXTRA_DIST += ChangeLog
++EXTRA_DIST = ChangeLog
+diff -Nru flux-0.4.1/src/comm/Makefile.am flux-0.4.1.new/src/comm/Makefile.am
+--- flux-0.4.1/src/comm/Makefile.am	Thu Feb 10 00:02:09 2000
++++ flux-0.4.1.new/src/comm/Makefile.am	Sun Dec  2 13:03:40 2001
+@@ -2,4 +2,4 @@
+ 
+ libcomm_la_SOURCES = alloc.c serialize.c limits.c queue.c blockio.c session.c
+ 
+-EXTRA_DIST += ChangeLog
++EXTRA_DIST = ChangeLog
+diff -Nru flux-0.4.1/src/fifobuf/Makefile.am flux-0.4.1.new/src/fifobuf/Makefile.am
+--- flux-0.4.1/src/fifobuf/Makefile.am	Thu Feb 10 00:02:10 2000
++++ flux-0.4.1.new/src/fifobuf/Makefile.am	Sun Dec  2 13:03:40 2001
+@@ -2,4 +2,4 @@
+ 
+ libfifobuf_la_SOURCES = fifobuf.c cipher.c
+ 
+-EXTRA_DIST += ChangeLog
++EXTRA_DIST = ChangeLog
+diff -Nru flux-0.4.1/src/fstring/Makefile.am flux-0.4.1.new/src/fstring/Makefile.am
+--- flux-0.4.1/src/fstring/Makefile.am	Thu Feb 10 00:02:10 2000
++++ flux-0.4.1.new/src/fstring/Makefile.am	Sun Dec  2 13:03:40 2001
+@@ -2,7 +2,7 @@
+ 
+ libfstring_la_SOURCES = afgets.c asprintf.c strarray.c strchrnum.c strndup.c \
+                        strrcmp.c strtrim.c strdcat.c strwrapcat.c vasprintf.c \
+-											 memcasecmp.c memspn.c memcspn.c memrchr.c memlwr.c \
+-											 memupr.c
++		       memcasecmp.c memspn.c memcspn.c memrchr.c memlwr.c \
++		       memupr.c
+ 
+-EXTRA_DIST += ChangeLog
++EXTRA_DIST = ChangeLog
+diff -Nru flux-0.4.1/src/log/Makefile.am flux-0.4.1.new/src/log/Makefile.am
+--- flux-0.4.1/src/log/Makefile.am	Thu Feb 10 00:02:11 2000
++++ flux-0.4.1.new/src/log/Makefile.am	Sun Dec  2 13:03:40 2001
+@@ -2,4 +2,4 @@
+ 
+ liblog_la_SOURCES = put.c session.c
+ 
+-EXTRA_DIST += ChangeLog
++EXTRA_DIST = ChangeLog
+diff -Nru flux-0.4.1/src/mem/Makefile.am flux-0.4.1.new/src/mem/Makefile.am
+--- flux-0.4.1/src/mem/Makefile.am	Thu Feb 10 00:02:11 2000
++++ flux-0.4.1.new/src/mem/Makefile.am	Sun Dec  2 13:03:40 2001
+@@ -2,4 +2,4 @@
+ 
+ libmem_la_SOURCES = block.c debug.c memory.c secure.c
+ 
+-EXTRA_DIST += ChangeLog
++EXTRA_DIST = ChangeLog
+diff -Nru flux-0.4.1/src/misc/Makefile.am flux-0.4.1.new/src/misc/Makefile.am
+--- flux-0.4.1/src/misc/Makefile.am	Thu Feb 10 00:02:11 2000
++++ flux-0.4.1.new/src/misc/Makefile.am	Sun Dec  2 13:03:40 2001
+@@ -2,4 +2,4 @@
+ 
+ libmisc_la_SOURCES = bitsize.c datestr.c paths.c
+ 
+-EXTRA_DIST += ChangeLog
++EXTRA_DIST = ChangeLog
+diff -Nru flux-0.4.1/src/mt/Makefile.am flux-0.4.1.new/src/mt/Makefile.am
+--- flux-0.4.1/src/mt/Makefile.am	Thu Feb 10 00:02:11 2000
++++ flux-0.4.1.new/src/mt/Makefile.am	Sun Dec  2 13:03:40 2001
+@@ -2,4 +2,4 @@
+ 
+ libmt_la_SOURCES = alloc.c attr.c navigate.c
+ 
+-EXTRA_DIST += ChangeLog
++EXTRA_DIST = ChangeLog
+diff -Nru flux-0.4.1/src/nvtp/Makefile.am flux-0.4.1.new/src/nvtp/Makefile.am
+--- flux-0.4.1/src/nvtp/Makefile.am	Thu Feb 10 00:02:15 2000
++++ flux-0.4.1.new/src/nvtp/Makefile.am	Sun Dec  2 13:03:40 2001
+@@ -2,4 +2,4 @@
+ 
+ libnvtp_la_SOURCES = alloc.c serialize.c queue.c blockio.c session.c
+ 
+-EXTRA_DIST += ChangeLog
++EXTRA_DIST = ChangeLog
+diff -Nru flux-0.4.1/src/ph/Makefile.am flux-0.4.1.new/src/ph/Makefile.am
+--- flux-0.4.1/src/ph/Makefile.am	Thu Feb 10 00:02:16 2000
++++ flux-0.4.1.new/src/ph/Makefile.am	Sun Dec  2 13:03:40 2001
+@@ -2,4 +2,4 @@
+ 
+ libph_la_SOURCES = alloc.c elem.c
+ 
+-EXTRA_DIST += ChangeLog
++EXTRA_DIST = ChangeLog
+diff -Nru flux-0.4.1/src/proc/Makefile.am flux-0.4.1.new/src/proc/Makefile.am
+--- flux-0.4.1/src/proc/Makefile.am	Thu Feb 10 00:02:12 2000
++++ flux-0.4.1.new/src/proc/Makefile.am	Sun Dec  2 13:03:40 2001
+@@ -2,4 +2,4 @@
+ 
+ libproc_la_SOURCES = daemon.c execsock.c
+ 
+-EXTRA_DIST += ChangeLog
++EXTRA_DIST = ChangeLog
+diff -Nru flux-0.4.1/src/proxy/Makefile.am flux-0.4.1.new/src/proxy/Makefile.am
+--- flux-0.4.1/src/proxy/Makefile.am	Thu Feb 10 00:02:15 2000
++++ flux-0.4.1.new/src/proxy/Makefile.am	Sat Dec  8 02:06:58 2001
+@@ -1,6 +1,5 @@
+ noinst_LTLIBRARIES = libproxy.la
+-EXTRA_DIST = private.h
+ 
+ libproxy_la_SOURCES = proxy.c comm.c nvtp.c smtp.c sock.c timer.c
+ 
+-EXTRA_DIST += ChangeLog
++EXTRA_DIST = private.h ChangeLog
+diff -Nru flux-0.4.1/src/random/Makefile.am flux-0.4.1.new/src/random/Makefile.am
+--- flux-0.4.1/src/random/Makefile.am	Thu Feb 10 00:02:12 2000
++++ flux-0.4.1.new/src/random/Makefile.am	Sun Dec  2 13:03:40 2001
+@@ -2,4 +2,4 @@
+ 
+ librand_la_SOURCES = gather_linux.c gather_unix.c gather_faked.c get.c
+ 
+-EXTRA_DIST += ChangeLog
++EXTRA_DIST = ChangeLog
+diff -Nru flux-0.4.1/src/smtp/Makefile.am flux-0.4.1.new/src/smtp/Makefile.am
+--- flux-0.4.1/src/smtp/Makefile.am	Thu Feb 10 00:02:16 2000
++++ flux-0.4.1.new/src/smtp/Makefile.am	Sun Dec  2 13:03:40 2001
+@@ -3,4 +3,4 @@
+ libsmtp_la_SOURCES = alloc.c queue.c session.c commands.c replies.c \
+ serialize.c blockio.c
+ 
+-EXTRA_DIST += ChangeLog
++EXTRA_DIST = ChangeLog
+diff -Nru flux-0.4.1/src/sock/Makefile.am flux-0.4.1.new/src/sock/Makefile.am
+--- flux-0.4.1/src/sock/Makefile.am	Thu Feb 10 00:02:12 2000
++++ flux-0.4.1.new/src/sock/Makefile.am	Sun Dec  2 13:03:40 2001
+@@ -2,4 +2,4 @@
+ 
+ libsock_la_SOURCES = alloc.c global.c session.c stream.c
+ 
+-EXTRA_DIST += ChangeLog
++EXTRA_DIST = ChangeLog
+diff -Nru flux-0.4.1/src/tn/Makefile.am flux-0.4.1.new/src/tn/Makefile.am
+--- flux-0.4.1/src/tn/Makefile.am	Thu Feb 10 00:02:13 2000
++++ flux-0.4.1.new/src/tn/Makefile.am	Sun Dec  2 13:03:40 2001
+@@ -2,4 +2,4 @@
+ 
+ libtn_la_SOURCES = node.c edge.c
+ 
+-EXTRA_DIST += ChangeLog
++EXTRA_DIST = ChangeLog
+diff -Nru flux-0.4.1/src/tt/Makefile.am flux-0.4.1.new/src/tt/Makefile.am
+--- flux-0.4.1/src/tt/Makefile.am	Thu Feb 10 00:02:13 2000
++++ flux-0.4.1.new/src/tt/Makefile.am	Sat Dec  8 02:07:16 2001
+@@ -1,7 +1,6 @@
+-EXTRA_DIST = tt_priv.h
+ noinst_LTLIBRARIES = libtt.la
+ 
+ libtt_la_SOURCES = init.c alloc.c navigate.c data.c hash.c find.c match.c \
+                    scan.l print.c stats.c
+ 
+-EXTRA_DIST += ChangeLog
++EXTRA_DIST = ChangeLog tt_priv.h
+diff -Nru flux-0.4.1/src/url/Makefile.am flux-0.4.1.new/src/url/Makefile.am
+--- flux-0.4.1/src/url/Makefile.am	Thu Feb 10 00:02:14 2000
++++ flux-0.4.1.new/src/url/Makefile.am	Sun Dec  2 13:03:40 2001
+@@ -2,4 +2,4 @@
+ 
+ liburl_la_SOURCES = escape.c split.c
+ 
+-EXTRA_DIST += ChangeLog
++EXTRA_DIST = ChangeLog
+diff -Nru flux-0.4.1/util/Makefile.am flux-0.4.1.new/util/Makefile.am
+--- flux-0.4.1/util/Makefile.am	Thu Feb 10 00:02:21 2000
++++ flux-0.4.1.new/util/Makefile.am	Sun Dec  2 13:03:40 2001
+@@ -3,4 +3,4 @@
+ dist-hook:
+ 	cp -a framework $(distdir)
+ 
+-EXTRA_DIST += ChangeLog
++EXTRA_DIST = ChangeLog
+diff -Nru flux-0.4.1/util/beauty/Makefile.am flux-0.4.1.new/util/beauty/Makefile.am
+--- flux-0.4.1/util/beauty/Makefile.am	Thu Feb 10 00:02:21 2000
++++ flux-0.4.1.new/util/beauty/Makefile.am	Sat Dec  8 02:07:47 2001
+@@ -1,6 +1,4 @@
+ noinst_PROGRAMS = tab2spc
+ tab2spc_SOURCES = tab2spc.c
+ 
+-EXTRA_DIST = layout.sh
+-
+-EXTRA_DIST += ChangeLog
++EXTRA_DIST = layout.sh ChangeLog
+diff -Nru flux-0.4.1/util/test/Makefile.am flux-0.4.1.new/util/test/Makefile.am
+--- flux-0.4.1/util/test/Makefile.am	Thu Feb 10 00:02:21 2000
++++ flux-0.4.1.new/util/test/Makefile.am	Sat Dec  8 02:08:04 2001
+@@ -4,4 +4,4 @@
+ 
+ LDADD = ../../src/libflux.la -lm
+ 
+-EXTRA_DIST += ChangeLog
++EXTRA_DIST = ChangeLog
