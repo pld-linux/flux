@@ -1,12 +1,14 @@
 Summary:	Flux is a survival-through-structure library
 Name:		flux
 Version:	0.4.1
-Release:	1
+Release:	2
 Group:		Libraries
 Group(fr):	Librairies
 Group(pl):	Biblioteki
 License:	GPL
 Source0:	ftp://ftp.styx.net/projects/flux/%{name}-%{version}.tar.gz
+Patch0:		%{name}-gethostbyname_is_in_libc_aka_no_libnsl.patch
+BuildRequires:	autoconf
 URL:		http://projects.simplemente.net/flux/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -79,7 +81,7 @@ Biblioteki statyczne flux.
 %setup -q
 
 %build
-LDFLAGS="-s"; export LDFLAGS
+autoconf
 %configure
 echo n | make
 
