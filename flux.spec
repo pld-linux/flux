@@ -1,6 +1,6 @@
 Summary:	Flux is a survival-through-structure library
 Name:		flux
-Version:	0.3.0
+Version:	0.4.0
 Release:	1
 Group:		Libraries
 Group(pl):	Biblioteki
