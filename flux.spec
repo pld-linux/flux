@@ -6,6 +6,7 @@ Release:	5
 License:	GPL
 Group:		Libraries
 Source0:	ftp://ftp.styx.net/projects/flux/%{name}-%{version}.tar.gz
+# Source0-md5:	959cf209acfed3af40baf6a3bcd9c26b
 Patch0:		%{name}-gethostbyname_is_in_libc_aka_no_libnsl.patch
 Patch1:		%{name}-acinclude_fix.patch
 Patch2:		%{name}-am15.patch
