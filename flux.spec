@@ -81,8 +81,8 @@ Biblioteki statyczne flux.
 %setup -q
 
 %build
-autoconf
-%configure
+#autoconf
+%configure2_13
 echo n | make
 
 %install
