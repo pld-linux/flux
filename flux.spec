@@ -2,16 +2,19 @@ Summary:	Flux is a survival-through-structure library
 Summary(pl):	Flux - biblioteka struktur danych i operacji na nich
 Name:		flux
 Version:	0.4.1
-Release:	5
+Release:	6
 License:	GPL
 Group:		Libraries
-Source0:	ftp://ftp.styx.net/projects/flux/%{name}-%{version}.tar.gz
+Source0:	ftp://ftp.copyleft.no/projects/fluxlib/%{name}-%{version}.tar.gz
 # Source0-md5:	959cf209acfed3af40baf6a3bcd9c26b
 Patch0:		%{name}-gethostbyname_is_in_libc_aka_no_libnsl.patch
 Patch1:		%{name}-acinclude_fix.patch
 Patch2:		%{name}-am15.patch
 Patch3:		%{name}-AC_C_BIGENDIAN.patch
-URL:		http://projects.simplemente.net/flux/
+Patch4:		%{name}-gcc33.patch
+Patch5:		%{name}-ltfix.patch
+Patch6:		%{name}-errno.patch
+URL:		http://www.fluxlib.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
@@ -58,7 +61,7 @@ ukazuj± swoja warto¶æ).
 Summary:	Header files and development documentation for flux
 Summary(pl):	Pliki nag³ówkowe i dokumentacja do flux
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files and development documentation for flux.
@@ -70,7 +73,7 @@ Pliki nag³ówkowe i dokumentacja do biblioteki flux.
 Summary:	Static flux libraries
 Summary(pl):	Biblioteki statyczne flux
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static flux libraries.
@@ -84,9 +87,11 @@ Biblioteki statyczne flux.
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
+%patch5 -p1
+%patch6 -p1
 
 %build
-rm -f missing
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
