@@ -1,15 +1,21 @@
 Summary:	Flux is a survival-through-structure library
+Summary(pl):	Flux - biblioteka struktur danych i operacji na nich
 Name:		flux
 Version:	0.4.1
 Release:	2
+License:	GPL
 Group:		Libraries
+Group(de):	Libraries
+Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
-License:	GPL
+Group(pt_BR):	Bibliotecas
+Group(ru):	‚…¬Ã…œ‘≈À…
+Group(uk):	‚¶¬Ã¶œ‘≈À…
 Source0:	ftp://ftp.styx.net/projects/flux/%{name}-%{version}.tar.gz
 Patch0:		%{name}-gethostbyname_is_in_libc_aka_no_libnsl.patch
-BuildRequires:	autoconf
 URL:		http://projects.simplemente.net/flux/
+BuildRequires:	autoconf
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -32,20 +38,20 @@ and IRC. (Note: IRC protocols are hairy and ill-defined. Unification
 and masking is particularly useful here).
 
 %description -l pl
-Flux jest bibliotek± typu "", ktÛrej celem jest redukcja z≥oøono∂ci
-programowania w C. W tym celu zaprojektowano funkcje wysokiego poziomu
-s≥uø±ce manipulacji danymi i komunikacji z wyspecjalizowanymi
-uchwytami, ukrywaj±c nuø±ce zazwyczaj zadania programistyczne.
-Popularne bloki instrukcji s± zawiniÍte w wywo≥aniach wyøszego poziomu
-o intuicyjnych nazwach. MÛwi±c krÛtko: ZrÛb to raz, zrÛb to dobrze i
-zapomnij o tym. Takie wyabstrahowywanie wymaga wielu kompromisÛw. We
-Fluksie powinny byÊ one ograniczone do minimum, czasem za∂, kiedy
-≥atwo jest uøyÊ lepszych algorytmÛw, zyskuje siÍ na wydajno∂ci. Inn±
-waøn± rzecz± jest stworzenie pomostu miÍdzy typowymi zadaniami
-(parsowanie, przechowywanie, wydobywanie, buforowanie i transfer),
-strukturami danych (generyczne struktury drzew, generyczne struktury
-sieci XML i formaty prezentacyjne) a protoko≥ami (FluxComm, protoko≥y
-uniksowe i IRC. Uwaga: protoko≥y ircowe s± niezgrabne i ºle
+Flux jest bibliotek± typu "survival-through-structure", ktÛrej celem
+jest redukcja z≥oøono∂ci programowania w C. W tym celu zaprojektowano
+funkcje wysokiego poziomu s≥uø±ce manipulacji danymi i komunikacji z
+wyspecjalizowanymi uchwytami, ukrywaj±c nuø±ce zazwyczaj zadania
+programistyczne. Popularne bloki instrukcji s± zawiniÍte w wywo≥aniach
+wyøszego poziomu o intuicyjnych nazwach. MÛwi±c krÛtko: ZrÛb to raz,
+zrÛb to dobrze i zapomnij o tym. Takie wyabstrahowywanie wymaga wielu
+kompromisÛw. We Fluksie powinny byÊ one ograniczone do minimum, czasem
+za∂, kiedy ≥atwo jest uøyÊ lepszych algorytmÛw, zyskuje siÍ na
+wydajno∂ci. Inn± waøn± rzecz± jest stworzenie pomostu miÍdzy typowymi
+zadaniami (parsowanie, przechowywanie, wydobywanie, buforowanie i
+transfer), strukturami danych (generyczne struktury drzew, generyczne
+struktury sieci XML i formaty prezentacyjne) a protoko≥ami (FluxComm,
+protoko≥y uniksowe i IRC. Uwaga: protoko≥y ircowe s± niezgrabne i ºle
 zdefiniowane. SzczegÛlnie w tym wypadku unifikacja i maskowanie
 ukazuj± swoja warto∂Ê).
 
@@ -53,8 +59,13 @@ ukazuj± swoja warto∂Ê).
 Summary:	Header files and development documentation for flux
 Summary(pl):	Pliki nag≥Ûwkowe i dokumentacja do flux
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	Ú¡⁄“¡¬œ‘À¡/‚…¬Ã…œ‘≈À…
+Group(uk):	Úœ⁄“œ¬À¡/‚¶¬Ã¶œ‘≈À…
 Requires:	%{name} = %{version}
 
 %description devel
@@ -67,8 +78,13 @@ Pliki nag≥Ûwkowe i dokumentacja do biblioteki flux.
 Summary:	Static flux libraries
 Summary(pl):	Biblioteki statyczne flux
 Group:		Development/Libraries
+Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	Ú¡⁄“¡¬œ‘À¡/‚…¬Ã…œ‘≈À…
+Group(uk):	Úœ⁄“œ¬À¡/‚¶¬Ã¶œ‘≈À…
 Requires:	%{name}-devel = %{version}
 
 %description static
