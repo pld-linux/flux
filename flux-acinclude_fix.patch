@@ -1,9 +1,14 @@
---- flux-0.4.1/acinclude.m4~	Sun Dec  2 12:50:00 2001
-+++ flux-0.4.1/acinclude.m4	Sun Dec  2 12:50:00 2001
-@@ -194,719 +194,3 @@
+--- flux-0.4.1/acinclude.m4~	Thu Feb 10 00:02:07 2000
++++ flux-0.4.1/acinclude.m4	Sat Dec 15 21:19:33 2001
+@@ -189,354 +189,6 @@
+     fi
+   ])
  
- 
- 
+-
+-
+-
+-
+-
 -
 -
 -# Macro to add for using GNU gettext.
@@ -347,25 +352,13 @@
 -  ])
 -
 -
--dnl WK_CHECK_TYPEDEF(TYPE, HAVE_NAME)
--dnl Check whether a typedef exists and create a #define $2 if it exists
--dnl
--AC_DEFUN(WK_CHECK_TYPEDEF,
--  [ AC_MSG_CHECKING(for $1 typedef)
--    AC_CACHE_VAL(wk_cv_typedef_$1,
--    [AC_TRY_COMPILE([#include <stdlib.h>
--    #include <sys/types.h>], [
--    #undef $1
--    int a = sizeof($1);
--    ], wk_cv_typedef_$1=yes, wk_cv_typedef_$1=no )])
--    AC_MSG_RESULT($wk_cv_typedef_$1)
--    if test "$wk_cv_typedef_$1" = yes; then
--        AC_DEFINE($2)
--    fi
--  ])
--
--
--
+ dnl WK_CHECK_TYPEDEF(TYPE, HAVE_NAME)
+ dnl Check whether a typedef exists and create a #define $2 if it exists
+ dnl
+@@ -556,357 +208,3 @@
+ 
+ 
+ 
 -dnl WK_LINK_FILES( SRC, DEST )
 -dnl same as AC_LINK_FILES, but collect the files to link in
 -dnl some special variables and do the link
