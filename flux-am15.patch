@@ -270,7 +270,7 @@ diff -Nru flux-0.4.1/util/test/Makefile.am flux-0.4.1.new/util/test/Makefile.am
  .S.o:
  
  .S.lo:
-+	$(CPP) $(INCLUDES) $(DEFS) -o $*.lo -c $<
++	$(CC) $(INCLUDES) $(DEFS) -o $*.lo -c $<
  
  .S.s:
  	 $(CPP) $(INCLUDES) $(DEFS) $< | grep -v '^#' >$*.s
