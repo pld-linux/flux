@@ -264,3 +264,13 @@ diff -Nru flux-0.4.1/util/test/Makefile.am flux-0.4.1.new/util/test/Makefile.am
  
 -EXTRA_DIST += ChangeLog
 +EXTRA_DIST = ChangeLog
+--- flux-0.4.1/src/mpi/Makefile.am.orig	Thu Feb 10 00:02:17 2000
++++ flux-0.4.1/src/mpi/Makefile.am	Mon Sep 30 03:20:54 2002
+@@ -51,6 +51,7 @@
+ .S.o:
+ 
+ .S.lo:
++	$(CPP) $(INCLUDES) $(DEFS) -o $*.lo -c $<
+ 
+ .S.s:
+ 	 $(CPP) $(INCLUDES) $(DEFS) $< | grep -v '^#' >$*.s
