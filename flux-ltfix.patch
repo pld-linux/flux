@@ -1,0 +1,11 @@
+--- flux-0.4.1/src/mpi/Makefile.am.orig	2004-03-28 20:31:51.000000000 +0200
++++ flux-0.4.1/src/mpi/Makefile.am	2004-03-28 20:49:49.028811520 +0200
+@@ -51,7 +51,7 @@
+ .S.o:
+ 
+ .S.lo:
+-	$(CC) $(INCLUDES) $(DEFS) -o $*.lo -c $<
++	$(LIBTOOL) --mode=compile $(CC) $(INCLUDES) $(DEFS) -o $*.lo -c $<
+ 
+ .S.s:
+ 	 $(CPP) $(INCLUDES) $(DEFS) $< | grep -v '^#' >$*.s
