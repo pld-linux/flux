@@ -7,7 +7,7 @@ Group(pl):	Biblioteki
 Copyright:	GPL
 Source:		ftp://ftp.styx.net/projects/flux/%{name}-%{version}.tar.gz
 URL:		http://projects.simplemente.net/flux/
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Flux is a survival-through-structure library, whose goal is to reduce the
@@ -44,7 +44,6 @@ przechowywanie, wydobywanie, buforowanie i transfer), strukturami danych
 prezentacyjne) a protoko³ami (FluxComm, protoko³y uniksowe i IRC. Uwaga:
 protoko³y ircowe s± niezgrabne i ¼le zdefiniowane. Szczególnie w tym wypadku
 unifikacja i maskowanie ukazuj± swoja warto¶æ).
-
 
 %package devel
 Summary:	Header files and development documentation for flux
