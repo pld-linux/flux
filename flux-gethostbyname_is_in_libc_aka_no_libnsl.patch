@@ -1,0 +1,13 @@
+diff -Nru flux-0.4.1/configure.in flux-0.4.1.new/configure.in
+--- flux-0.4.1/configure.in	Thu Feb 10 00:02:07 2000
++++ flux-0.4.1.new/configure.in	Tue Aug 22 00:22:14 2000
+@@ -142,7 +142,8 @@
+ dnl --- Checks for libraries ---
+ 
+ AC_CHECK_LIB(socket, socket)
+-AC_CHECK_LIB(nsl, gethostbyname)
++AC_CHECK_FUNC(gethostbyname, ,
++	AC_CHECK_LIB(nsl, gethostbyname, LIBS="$LIBS -lnsl",) )
+ 
+ 
+ dnl --- Checks for header files ---
