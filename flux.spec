@@ -62,7 +62,7 @@ Requires:	%{name} = %{version}
 %description devel
 Header files and development documentation for flux.
 
-%description -l pl devel
+%description devel -l pl
 Pliki nag³ówkowe i dokumentacja do biblioteki flux.
 
 %package static
@@ -74,7 +74,7 @@ Requires:	%{name}-devel = %{version}
 %description static
 Static flux libraries.
 
-%description -l pl static
+%description static -l pl
 Biblioteki statyczne flux.
 
 %prep
@@ -98,7 +98,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf AUTHORS README NEWS TODO 
+gzip -9nf AUTHORS README NEWS TODO
 
 %clean
 rm -rf $RPM_BUILD_ROOT
