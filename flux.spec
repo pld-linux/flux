@@ -94,8 +94,6 @@ strip --strip-unneeded $RPM_BUILD_ROOT%{_libdir}/lib*.so.*.*
 
 gzip -9nf AUTHORS README NEWS TODO 
 
-%find_lang %{name}
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
