@@ -1,0 +1,49 @@
+--- flux-0.4.1/configure.in~	Sat Dec 15 21:07:30 2001
++++ flux-0.4.1/configure.in	Sat Dec 15 21:07:30 2001
+@@ -189,7 +189,7 @@
+ AC_DECL_SYS_SIGLIST
+ AC_HEADER_TIME
+ 
+-WK_CHECK_ENDIAN
++AC_C_BIGENDIAN
+ 
+ WK_CHECK_TYPEDEF(byte, HAVE_BYTE_TYPEDEF)
+ WK_CHECK_TYPEDEF(ushort, HAVE_USHORT_TYPEDEF)
+--- flux-0.4.1/src/cipher/rmd160.c~	Sat Dec 15 21:06:25 2001
++++ flux-0.4.1/src/cipher/rmd160.c	Sat Dec 15 21:06:25 2001
+@@ -175,7 +175,7 @@
+ 
+ 
+     u32 a,b,c,d,e,aa,bb,cc,dd,ee,t;
+-  #ifdef BIG_ENDIAN_HOST
++  #ifdef WORDS_BIGENDIAN
+     u32 x[16];
+     { int i;
+       byte *p2, *p1;
+@@ -510,7 +510,7 @@
+     transform( hd, hd->buf );
+ 
+     p = hd->buf;
+-  #ifdef BIG_ENDIAN_HOST
++  #ifdef WORDS_BIGENDIAN
+     #define X(a) do { *p++ = hd->h##a     ; *p++ = hd->h##a >> 8;  \
+           *p++ = hd->h##a >> 16; *p++ = hd->h##a >> 24; } while(0)
+   #else /* little endian */
+--- flux-0.4.1/src/random/gather_unix.c~	Sat Dec 15 21:09:45 2001
++++ flux-0.4.1/src/random/gather_unix.c	Sat Dec 15 21:09:45 2001
+@@ -61,15 +61,6 @@
+ 
+ /* OS-specific includes */
+ 
+-#ifdef __osf__
+-  /* Somewhere in the morass of system-specific cruft which OSF/1 pulls in
+-   * via the following includes are various endianness defines, so we
+-   * undefine the cryptlib ones, which aren't really needed for this module
+-   * anyway */
+-#  undef BIG_ENDIAN
+-#  undef LITTLE_ENDIAN
+-#endif        /* __osf__ */
+-
+ #include <unistd.h>
+ #include <signal.h>
+ #include <fcntl.h>
