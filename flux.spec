@@ -2,7 +2,7 @@ Summary:	Flux is a survival-through-structure library
 Summary(pl):	Flux - biblioteka struktur danych i operacji na nich
 Name:		flux
 Version:	0.4.1
-Release:	4
+Release:	5
 License:	GPL
 Group:		Libraries
 Source0:	ftp://ftp.styx.net/projects/flux/%{name}-%{version}.tar.gz
