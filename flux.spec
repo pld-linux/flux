@@ -5,13 +5,6 @@ Version:	0.4.1
 Release:	3
 License:	GPL
 Group:		Libraries
-Group(de):	Libraries
-Group(es):	Bibliotecas
-Group(fr):	Librairies
-Group(pl):	Biblioteki
-Group(pt_BR):	Bibliotecas
-Group(ru):	Библиотеки
-Group(uk):	Б╕бл╕отеки
 Source0:	ftp://ftp.styx.net/projects/flux/%{name}-%{version}.tar.gz
 Patch0:		%{name}-gethostbyname_is_in_libc_aka_no_libnsl.patch
 Patch1:		%{name}-acinclude_fix.patch
@@ -64,13 +57,6 @@ ukazuj╠ swoja warto╤Ф).
 Summary:	Header files and development documentation for flux
 Summary(pl):	Pliki nagЁСwkowe i dokumentacja do flux
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description devel
@@ -83,13 +69,6 @@ Pliki nagЁСwkowe i dokumentacja do biblioteki flux.
 Summary:	Static flux libraries
 Summary(pl):	Biblioteki statyczne flux
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static
