@@ -16,6 +16,7 @@ Source0:	ftp://ftp.styx.net/projects/flux/%{name}-%{version}.tar.gz
 Patch0:		%{name}-gethostbyname_is_in_libc_aka_no_libnsl.patch
 Patch1:		%{name}-acinclude_fix.patch
 Patch2:		%{name}-am15.patch
+Patch3:		%{name}-AC_C_BIGENDIAN.patch
 URL:		http://projects.simplemente.net/flux/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -102,6 +103,7 @@ Biblioteki statyczne flux.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 rm -f missing
