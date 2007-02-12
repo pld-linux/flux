@@ -1,5 +1,5 @@
 Summary:	Flux is a survival-through-structure library
-Summary(pl):	Flux - biblioteka struktur danych i operacji na nich
+Summary(pl.UTF-8):   Flux - biblioteka struktur danych i operacji na nich
 Name:		flux
 Version:	0.4.1
 Release:	6
@@ -39,46 +39,46 @@ presentation formats, and protocols - like FluxComm, Unix protocols
 and IRC. (Note: IRC protocols are hairy and ill-defined. Unification
 and masking is particularly useful here).
 
-%description -l pl
-Flux jest bibliotek± typu "survival-through-structure", której celem
-jest redukcja z³o¿ono¶ci programowania w C. W tym celu zaprojektowano
-funkcje wysokiego poziomu s³u¿±ce manipulacji danymi i komunikacji z
-wyspecjalizowanymi uchwytami, ukrywaj±c nu¿±ce zazwyczaj zadania
-programistyczne. Popularne bloki instrukcji s± zawiniête w wywo³aniach
-wy¿szego poziomu o intuicyjnych nazwach. Mówi±c krótko: Zrób to raz,
-zrób to dobrze i zapomnij o tym. Takie wyabstrahowywanie wymaga wielu
-kompromisów. We Fluksie powinny byæ one ograniczone do minimum, czasem
-za¶, kiedy ³atwo jest u¿yæ lepszych algorytmów, zyskuje siê na
-wydajno¶ci. Inn± wa¿n± rzecz± jest stworzenie pomostu miêdzy typowymi
+%description -l pl.UTF-8
+Flux jest bibliotekÄ… typu "survival-through-structure", ktÃ³rej celem
+jest redukcja zÅ‚oÅ¼onoÅ›ci programowania w C. W tym celu zaprojektowano
+funkcje wysokiego poziomu sÅ‚uÅ¼Ä…ce manipulacji danymi i komunikacji z
+wyspecjalizowanymi uchwytami, ukrywajÄ…c nuÅ¼Ä…ce zazwyczaj zadania
+programistyczne. Popularne bloki instrukcji sÄ… zawiniÄ™te w wywoÅ‚aniach
+wyÅ¼szego poziomu o intuicyjnych nazwach. MÃ³wiÄ…c krÃ³tko: ZrÃ³b to raz,
+zrÃ³b to dobrze i zapomnij o tym. Takie wyabstrahowywanie wymaga wielu
+kompromisÃ³w. We Fluksie powinny byÄ‡ one ograniczone do minimum, czasem
+zaÅ›, kiedy Å‚atwo jest uÅ¼yÄ‡ lepszych algorytmÃ³w, zyskuje siÄ™ na
+wydajnoÅ›ci. InnÄ… waÅ¼nÄ… rzeczÄ… jest stworzenie pomostu miÄ™dzy typowymi
 zadaniami (parsowanie, przechowywanie, wydobywanie, buforowanie i
 transfer), strukturami danych (generyczne struktury drzew, generyczne
-struktury sieci XML i formaty prezentacyjne) a protoko³ami (FluxComm,
-protoko³y uniksowe i IRC. Uwaga: protoko³y ircowe s± niezgrabne i ¼le
-zdefiniowane. Szczególnie w tym wypadku unifikacja i maskowanie
-ukazuj± swoja warto¶æ).
+struktury sieci XML i formaty prezentacyjne) a protokoÅ‚ami (FluxComm,
+protokoÅ‚y uniksowe i IRC. Uwaga: protokoÅ‚y ircowe sÄ… niezgrabne i Åºle
+zdefiniowane. SzczegÃ³lnie w tym wypadku unifikacja i maskowanie
+ukazujÄ… swoja wartoÅ›Ä‡).
 
 %package devel
 Summary:	Header files and development documentation for flux
-Summary(pl):	Pliki nag³ówkowe i dokumentacja do flux
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe i dokumentacja do flux
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files and development documentation for flux.
 
-%description devel -l pl
-Pliki nag³ówkowe i dokumentacja do biblioteki flux.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe i dokumentacja do biblioteki flux.
 
 %package static
 Summary:	Static flux libraries
-Summary(pl):	Biblioteki statyczne flux
+Summary(pl.UTF-8):   Biblioteki statyczne flux
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static flux libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteki statyczne flux.
 
 %prep
