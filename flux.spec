@@ -1,5 +1,5 @@
 Summary:	Flux is a survival-through-structure library
-Summary(pl.UTF-8):   Flux - biblioteka struktur danych i operacji na nich
+Summary(pl.UTF-8):	Flux - biblioteka struktur danych i operacji na nich
 Name:		flux
 Version:	0.4.1
 Release:	6
@@ -59,7 +59,7 @@ ukazują swoja wartość).
 
 %package devel
 Summary:	Header files and development documentation for flux
-Summary(pl.UTF-8):   Pliki nagłówkowe i dokumentacja do flux
+Summary(pl.UTF-8):	Pliki nagłówkowe i dokumentacja do flux
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -71,7 +71,7 @@ Pliki nagłówkowe i dokumentacja do biblioteki flux.
 
 %package static
 Summary:	Static flux libraries
-Summary(pl.UTF-8):   Biblioteki statyczne flux
+Summary(pl.UTF-8):	Biblioteki statyczne flux
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
